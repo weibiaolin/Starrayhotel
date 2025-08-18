@@ -1,2 +1,2 @@
 # Starray Hotel Website
-Multi-language static site with top navigation.
+This is the README file.
