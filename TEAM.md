@@ -1,4 +1,4 @@
 # Team
-- Alex: Founder & Chairman
-- Bill: Brand & Ops Lead
-- Kevin: Technical Director
+- Alex (Founder)
+- Bill (Brand & Ops)
+- Kevin (Tech Director)
