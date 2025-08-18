@@ -1,4 +1,2 @@
-# Project Package
-This is a multi-language website project.
-
-Languages: Chinese, English, Indonesian.
+# Starray Hotel Website
+Multi-language static site with top navigation.
