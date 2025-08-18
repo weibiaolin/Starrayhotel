@@ -1,2 +1,3 @@
-# Starray Hotel Website
-This is the README file.
+# Starray Hotel Site (Checked)
+
+Clean structure with language pages and top navigation.
