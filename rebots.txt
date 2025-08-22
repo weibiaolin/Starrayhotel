@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# 主页和正确页面
+Sitemap: https://www.starrayhotel.com/sitemap.xml
+
+# 禁止访问错误的路径，防止搜索引擎索引
+Disallow: /en/
+Disallow: /cn/
+Disallow: /id/
+Disallow: /zh/
+Disallow: /*index.html
+
+# 允许主页
+Allow: /index.html
+Allow: /404.html
