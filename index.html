@@ -28,6 +28,9 @@
     <link rel="alternate" hreflang="zh-CN" href="https://www.starrayhotel.com/" />
     <link rel="alternate" hreflang="x-default" href="https://www.starrayhotel.com/" />
 
+    <!-- Google Fonts - Tesla风格字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- URL重定向脚本 - 处理错误的搜索结果链接 -->
     <script>
     (function() {
@@ -81,16 +84,15 @@
             color: #333;
         }
         
-        /* 导航栏 - 与logo背景色100%一致 */
+        /* 导航栏 - 纯白色背景 */
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(247, 247, 247, 0.95);
-            backdrop-filter: blur(10px);
+            background: #ffffff; /* 纯白色背景 */
             z-index: 1000;
             padding: 1rem 0;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
@@ -104,7 +106,7 @@
         }
         
         .logo {
-            height: 50px;
+            height: 80px; /* 增大logo尺寸 */
         }
         
         .nav-menu {
@@ -158,7 +160,7 @@
             overflow: hidden;
         }
         
-        /* 星空背景动画 */
+        /* 静态星空背景 - 只闪耀不移动 */
         .hero::before {
             content: '';
             position: absolute;
@@ -167,51 +169,31 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(2px 2px at 20px 30px, #ffd700, transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(255, 215, 0, 0.8), transparent),
-                radial-gradient(1px 1px at 90px 40px, #ffd700, transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(255, 215, 0, 0.6), transparent),
-                radial-gradient(2px 2px at 160px 30px, #ffd700, transparent),
-                radial-gradient(1px 1px at 200px 60px, rgba(255, 215, 0, 0.7), transparent),
-                radial-gradient(1px 1px at 240px 90px, #ffd700, transparent),
-                radial-gradient(2px 2px at 280px 20px, rgba(255, 215, 0, 0.9), transparent),
-                radial-gradient(1px 1px at 320px 50px, #ffd700, transparent),
-                radial-gradient(1px 1px at 360px 80px, rgba(255, 215, 0, 0.5), transparent);
+                radial-gradient(2px 2px at 120px 80px, #ffd700, transparent),
+                radial-gradient(1px 1px at 250px 150px, rgba(255, 215, 0, 0.8), transparent),
+                radial-gradient(1px 1px at 380px 60px, #ffcc66, transparent),
+                radial-gradient(2px 2px at 520px 180px, rgba(255, 170, 0, 0.6), transparent),
+                radial-gradient(1px 1px at 680px 90px, #ffd700, transparent),
+                radial-gradient(1px 1px at 150px 320px, rgba(255, 215, 0, 0.7), transparent),
+                radial-gradient(2px 2px at 450px 280px, #ffcc66, transparent),
+                radial-gradient(1px 1px at 720px 240px, rgba(255, 170, 0, 0.9), transparent),
+                radial-gradient(1px 1px at 80px 200px, #ffd700, transparent),
+                radial-gradient(1px 1px at 600px 350px, rgba(255, 215, 0, 0.5), transparent),
+                radial-gradient(2px 2px at 320px 120px, #ffcc66, transparent),
+                radial-gradient(1px 1px at 780px 160px, rgba(255, 170, 0, 0.8), transparent),
+                radial-gradient(1px 1px at 50px 380px, #ffd700, transparent),
+                radial-gradient(1px 1px at 550px 50px, rgba(255, 215, 0, 0.6), transparent),
+                radial-gradient(2px 2px at 200px 420px, #ffcc66, transparent);
             background-repeat: repeat;
-            background-size: 400px 200px;
-            animation: starfield 20s linear infinite;
+            background-size: 800px 500px;
+            animation: starTwinkle 3s ease-in-out infinite alternate;
             opacity: 0.8;
         }
         
-        /* 流星效果 */
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(45deg, transparent 40%, rgba(255, 215, 0, 0.3) 50%, transparent 60%),
-                linear-gradient(-45deg, transparent 40%, rgba(255, 215, 0, 0.2) 50%, transparent 60%);
-            background-size: 200px 200px, 300px 300px;
-            animation: shooting-stars 15s ease-in-out infinite;
-            opacity: 0.6;
-        }
-        
-        @keyframes starfield {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-200px); }
-        }
-        
-        @keyframes shooting-stars {
-            0%, 100% { opacity: 0; transform: translateX(-100px) translateY(-100px); }
-            10% { opacity: 0.3; }
-            20% { opacity: 0.6; transform: translateX(100px) translateY(100px); }
-            30% { opacity: 0; }
-            70% { opacity: 0; transform: translateX(-50px) translateY(-50px); }
-            80% { opacity: 0.4; }
-            90% { opacity: 0.2; transform: translateX(150px) translateY(150px); }
+        /* 星星闪耀动画 */
+        @keyframes starTwinkle {
+            0% { opacity: 0.4; }
+            100% { opacity: 0.9; }
         }
         
         .hero-content {
@@ -219,32 +201,46 @@
             position: relative;
         }
         
+        /* Tesla风格字体 */
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
             font-weight: 300;
             color: white;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
         }
         
-        .hero .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+        /* Rest. Relax. Reset - 黄色字体 */
+        .hero .main-tagline {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
             color: #ffd700;
-            font-weight: 600;
+            font-weight: 400;
             text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+            font-style: italic;
         }
         
         .hero .subtitle {
             font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            color: #ffd700;
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
         
-        /* 三步体验 */
-        .three-steps {
+        /* Hotel Investment & Management Excellence - 白色字体，缩小 */
+        .hero .business-tagline {
+            font-size: 1rem;
+            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Brand Story & 三步体验合并 */
+        .brand-experience {
             padding: 4rem 0;
             background: #f8f9fa;
         }
@@ -253,6 +249,49 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+        }
+        
+        .brand-story-section {
+            margin-bottom: 4rem;
+        }
+        
+        .brand-story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .brand-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #19376D;
+        }
+        
+        .brand-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .feature::before {
+            content: '✦';
+            color: #ffd700;
+            font-size: 1.2rem;
         }
         
         .steps-grid {
@@ -300,55 +339,10 @@
             line-height: 1.8;
         }
         
-        /* 关于我们 */
-        .about {
-            padding: 4rem 0;
-            background: white;
-            color: #333;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #19376D;
-        }
-        
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .feature::before {
-            content: '✦';
-            color: #ffd700;
-            font-size: 1.2rem;
-        }
-        
         /* 团队介绍 */
         .team {
             padding: 4rem 0;
-            background: #f8f9fa;
+            background: white;
         }
         
         .team h2 {
@@ -359,7 +353,7 @@
         }
         
         .team-placeholder {
-            background: white;
+            background: #f8f9fa;
             border-radius: 15px;
             padding: 3rem;
             text-align: center;
@@ -380,7 +374,7 @@
         /* 管理理念 */
         .management {
             padding: 4rem 0;
-            background: white;
+            background: #f8f9fa;
         }
         
         .management h2 {
@@ -391,7 +385,7 @@
         }
         
         .management-placeholder {
-            background: #f8f9fa;
+            background: white;
             border-radius: 15px;
             padding: 3rem;
             text-align: center;
@@ -412,7 +406,7 @@
         /* 联系我们 */
         .contact {
             padding: 4rem 0;
-            background: #f8f9fa;
+            background: white;
         }
         
         .contact-content {
@@ -460,19 +454,23 @@
                 display: none;
             }
             
-            .hero h1 {
-                font-size: 2.5rem;
+            .logo {
+                height: 60px; /* 移动端适配 */
             }
             
-            .hero .tagline {
-                font-size: 1.2rem;
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero .main-tagline {
+                font-size: 1.4rem;
             }
             
             .steps-grid {
                 grid-template-columns: 1fr;
             }
             
-            .about-content {
+            .brand-story-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -509,10 +507,10 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
-            <img src="https://page.gensparksite.com/v1/base64_upload/2bf9c04fef145d527c4b795bec47494a" alt="Starray Hotel Logo" class="logo">
+            <img src="https://page.gensparksite.com/v1/base64_upload/015bb78e78988c9423a3a5e335fcede9" alt="Starray Hotel Logo" class="logo">
             <ul class="nav-menu">
                 <li><a href="#home" class="lang-content active" data-lang="en">Home</a><a href="#home" class="lang-content" data-lang="id">Beranda</a><a href="#home" class="lang-content" data-lang="zh">首页</a></li>
-                <li><a href="#about" class="lang-content active" data-lang="en">About</a><a href="#about" class="lang-content" data-lang="id">Tentang</a><a href="#about" class="lang-content" data-lang="zh">关于我们</a></li>
+                <li><a href="#brand-story" class="lang-content active" data-lang="en">Brand Story</a><a href="#brand-story" class="lang-content" data-lang="id">Cerita Merek</a><a href="#brand-story" class="lang-content" data-lang="zh">品牌故事</a></li>
                 <li><a href="#team" class="lang-content active" data-lang="en">Team</a><a href="#team" class="lang-content" data-lang="id">Tim</a><a href="#team" class="lang-content" data-lang="zh">团队</a></li>
                 <li><a href="#management" class="lang-content active" data-lang="en">Management</a><a href="#management" class="lang-content" data-lang="id">Manajemen</a><a href="#management" class="lang-content" data-lang="zh">管理理念</a></li>
                 <li><a href="#contact" class="lang-content active" data-lang="en">Contact</a><a href="#contact" class="lang-content" data-lang="id">Kontak</a><a href="#contact" class="lang-content" data-lang="zh">联系我们</a></li>
@@ -532,98 +530,103 @@
             <h1 class="lang-content" data-lang="id">HOTEL STARRAY</h1>
             <h1 class="lang-content" data-lang="zh">星耀酒店</h1>
             
-            <div class="tagline lang-content active" data-lang="en">Hotel Investment & Management Excellence</div>
-            <div class="tagline lang-content" data-lang="id">Keunggulan Investasi & Manajemen Hotel</div>
-            <div class="tagline lang-content" data-lang="zh">酒店投资与管理专家</div>
+            <div class="main-tagline lang-content active" data-lang="en">Rest. Relax. Reset</div>
+            <div class="main-tagline lang-content" data-lang="id">Rest. Relax. Reset</div>
+            <div class="main-tagline lang-content" data-lang="zh">Rest. Relax. Reset</div>
             
-            <div class="subtitle lang-content active" data-lang="en">Rest. Relax. Reset<br>Redefining 3-Star Hotel Experience in Indonesia</div>
-            <div class="subtitle lang-content" data-lang="id">Rest. Relax. Reset<br>Mendefinisikan Ulang Pengalaman Hotel Bintang 3 di Indonesia</div>
-            <div class="subtitle lang-content" data-lang="zh">Rest. Relax. Reset<br>重新定义印尼三星级酒店体验</div>
+            <div class="subtitle lang-content active" data-lang="en">Redefining 3-Star Hotel Experience in Indonesia</div>
+            <div class="subtitle lang-content" data-lang="id">Mendefinisikan Ulang Pengalaman Hotel Bintang 3 di Indonesia</div>
+            <div class="subtitle lang-content" data-lang="zh">重新定义印尼三星级酒店体验</div>
+            
+            <div class="business-tagline lang-content active" data-lang="en">Hotel Investment & Management Excellence</div>
+            <div class="business-tagline lang-content" data-lang="id">Keunggulan Investasi & Manajemen Hotel</div>
+            <div class="business-tagline lang-content" data-lang="zh">酒店投资与管理专家</div>
         </div>
     </section>
 
-    <!-- 三步体验 -->
-    <section class="three-steps" id="experience">
+    <!-- Brand Story & 三步体验合并 -->
+    <section class="brand-experience" id="brand-story">
         <div class="container">
-            <h2 class="section-title lang-content active" data-lang="en">Three-Step Experience Cycle</h2>
-            <h2 class="section-title lang-content" data-lang="id">Siklus Pengalaman Tiga Langkah</h2>
-            <h2 class="section-title lang-content" data-lang="zh">三段式体验循环</h2>
-            
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-icon">1</div>
-                    <h3 class="lang-content active" data-lang="en">Rest - Deep Relaxation</h3>
-                    <h3 class="lang-content" data-lang="id">Rest - Istirahat Mendalam</h3>
-                    <h3 class="lang-content" data-lang="zh">Rest 深度休息</h3>
-                    
-                    <p class="lang-content active" data-lang="en">Five-star standard mattresses, bedding, amenities and linens create a premium sleep environment to revitalize you.</p>
-                    <p class="lang-content" data-lang="id">Kasur, seprai, fasilitas dan linen berstandar bintang lima menciptakan lingkungan tidur premium untuk merevitalisasi Anda.</p>
-                    <p class="lang-content" data-lang="zh">五星级标准的床垫、床品、用品与床单，打造优质睡眠环境，让您焕发活力。</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-icon">2</div>
-                    <h3 class="lang-content active" data-lang="en">Relax - Emotional Soothing</h3>
-                    <h3 class="lang-content" data-lang="id">Relax - Menenangkan Emosi</h3>
-                    <h3 class="lang-content" data-lang="zh">Relax 情绪舒缓</h3>
-                    
-                    <p class="lang-content active" data-lang="en">A quiet and soothing space that allows you to reset and focus, equipped with complete relaxation facilities.</p>
-                    <p class="lang-content" data-lang="id">Ruang yang tenang dan menenangkan yang memungkinkan Anda untuk reset dan fokus, dilengkapi dengan fasilitas relaksasi lengkap.</p>
-                    <p class="lang-content" data-lang="zh">一个安静舒缓的空间，让您重启与专注，配备完整的放松设施。</p>
-                </div>
-                
-                <div class="step">
-                    <div class="step-icon">3</div>
-                    <h3 class="lang-content active" data-lang="en">Reset - Status Update</h3>
-                    <h3 class="lang-content" data-lang="id">Reset - Pembaruan Status</h3>
-                    <h3 class="lang-content" data-lang="zh">Reset 状态更新</h3>
-                    
-                    <p class="lang-content active" data-lang="en">Restart your body and mind, energize for a new day, and provide a complete renewal experience.</p>
-                    <p class="lang-content" data-lang="id">Mulai ulang tubuh dan pikiran Anda, berenergi untuk hari yang baru, dan memberikan pengalaman pembaruan yang lengkap.</p>
-                    <p class="lang-content" data-lang="zh">重启身心，为新的一天蓄满能量，提供完整的更新体验。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 关于我们 -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="lang-content active" data-lang="en">Brand Story</h2>
-                    <h2 class="lang-content" data-lang="id">Cerita Merek</h2>
-                    <h2 class="lang-content" data-lang="zh">品牌故事</h2>
-                    
-                    <p class="lang-content active" data-lang="en">In today's fast-paced business world, travelers shuttle between cities, time zones and tasks. What they need is not just a bed, but a space to find their rhythm again.</p>
-                    <p class="lang-content" data-lang="id">Di dunia bisnis yang bergerak cepat saat ini, para pelancong bergerak antar kota, zona waktu, dan tugas. Yang mereka butuhkan bukan hanya tempat tidur, tapi ruang untuk menemukan kembali ritme mereka.</p>
-                    <p class="lang-content" data-lang="zh">在当今节奏快速变化的商务世界中，旅客穿梭于城市、时区与任务之间。他们需要的，不仅仅是一张床，而是一个找回节奏的空间。</p>
-                    
-                    <p class="lang-content active" data-lang="en">Starray Hotel was born for this purpose. Inspired by the tranquility and clarity brought by the stars, we provide modern travelers with professional hotel investment and management services.</p>
-                    <p class="lang-content" data-lang="id">Hotel Starray lahir untuk tujuan ini. Terinspirasi oleh ketenangan dan kejelasan yang dibawa oleh bintang-bintang, kami menyediakan layanan investasi dan manajemen hotel profesional bagi para pelancong modern.</p>
-                    <p class="lang-content" data-lang="zh">星耀酒店正是为此而生。灵感来自星辰所带来的宁静与清晰，我们为现代旅人提供专业的酒店投资与管理服务。</p>
-                    
-                    <div class="features">
-                        <div class="feature lang-content active" data-lang="en">Hotel Investment Consulting</div>
-                        <div class="feature lang-content" data-lang="id">Konsultasi Investasi Hotel</div>
-                        <div class="feature lang-content" data-lang="zh">酒店投资咨询</div>
+            <!-- Brand Story部分 -->
+            <div class="brand-story-section">
+                <div class="brand-story-content">
+                    <div class="brand-text">
+                        <h2 class="lang-content active" data-lang="en">Brand Story</h2>
+                        <h2 class="lang-content" data-lang="id">Cerita Merek</h2>
+                        <h2 class="lang-content" data-lang="zh">品牌故事</h2>
                         
-                        <div class="feature lang-content active" data-lang="en">Professional Management</div>
-                        <div class="feature lang-content" data-lang="id">Manajemen Profesional</div>
-                        <div class="feature lang-content" data-lang="zh">专业管理服务</div>
+                        <p class="lang-content active" data-lang="en">In today's fast-paced business world, travelers shuttle between cities, time zones and tasks. What they need is not just a bed, but a space to find their rhythm again.</p>
+                        <p class="lang-content" data-lang="id">Di dunia bisnis yang bergerak cepat saat ini, para pelancong bergerak antar kota, zona waktu, dan tugas. Yang mereka butuhkan bukan hanya tempat tidur, tapi ruang untuk menemukan kembali ritme mereka.</p>
+                        <p class="lang-content" data-lang="zh">在当今节奏快速变化的商务世界中，旅客穿梭于城市、时区与任务之间。他们需要的，不仅仅是一张床，而是一个找回节奏的空间。</p>
                         
-                        <div class="feature lang-content active" data-lang="en">Brand Development</div>
-                        <div class="feature lang-content" data-lang="id">Pengembangan Merek</div>
-                        <div class="feature lang-content" data-lang="zh">品牌发展</div>
+                        <p class="lang-content active" data-lang="en">Starray Hotel was born for this purpose. Inspired by the tranquility and clarity brought by the stars, we provide modern travelers with professional hotel investment and management services.</p>
+                        <p class="lang-content" data-lang="id">Hotel Starray lahir untuk tujuan ini. Terinspirasi oleh ketenangan dan kejelasan yang dibawa oleh bintang-bintang, kami menyediakan layanan investasi dan manajemen hotel profesional bagi para pelancong modern.</p>
+                        <p class="lang-content" data-lang="zh">星耀酒店正是为此而生。灵感来自星辰所带来的宁静与清晰，我们为现代旅人提供专业的酒店投资与管理服务。</p>
                         
-                        <div class="feature lang-content active" data-lang="en">Market Analysis</div>
-                        <div class="feature lang-content" data-lang="id">Analisis Pasar</div>
-                        <div class="feature lang-content" data-lang="zh">市场分析</div>
+                        <div class="features">
+                            <div class="feature lang-content active" data-lang="en">Hotel Investment Consulting</div>
+                            <div class="feature lang-content" data-lang="id">Konsultasi Investasi Hotel</div>
+                            <div class="feature lang-content" data-lang="zh">酒店投资咨询</div>
+                            
+                            <div class="feature lang-content active" data-lang="en">Professional Management</div>
+                            <div class="feature lang-content" data-lang="id">Manajemen Profesional</div>
+                            <div class="feature lang-content" data-lang="zh">专业管理服务</div>
+                            
+                            <div class="feature lang-content active" data-lang="en">Brand Development</div>
+                            <div class="feature lang-content" data-lang="id">Pengembangan Merek</div>
+                            <div class="feature lang-content" data-lang="zh">品牌发展</div>
+                            
+                            <div class="feature lang-content active" data-lang="en">Market Analysis</div>
+                            <div class="feature lang-content" data-lang="id">Analisis Pasar</div>
+                            <div class="feature lang-content" data-lang="zh">市场分析</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image" style="text-align: center;">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/d291fa93d5eeeaf436ab44b678ba19be" alt="Starray Hotel Building" style="max-width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
                     </div>
                 </div>
+            </div>
+
+            <!-- 三步体验部分 -->
+            <div>
+                <h2 class="section-title lang-content active" data-lang="en">Three-Step Experience Cycle</h2>
+                <h2 class="section-title lang-content" data-lang="id">Siklus Pengalaman Tiga Langkah</h2>
+                <h2 class="section-title lang-content" data-lang="zh">三段式体验循环</h2>
                 
-                <div class="about-image" style="text-align: center;">
-                    <img src="https://page.gensparksite.com/v1/base64_upload/d291fa93d5eeeaf436ab44b678ba19be" alt="Starray Hotel Building" style="max-width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h3 class="lang-content active" data-lang="en">Rest - Deep Relaxation</h3>
+                        <h3 class="lang-content" data-lang="id">Rest - Istirahat Mendalam</h3>
+                        <h3 class="lang-content" data-lang="zh">Rest 深度休息</h3>
+                        
+                        <p class="lang-content active" data-lang="en">Five-star standard mattresses, bedding, amenities and linens create a premium sleep environment to revitalize you.</p>
+                        <p class="lang-content" data-lang="id">Kasur, seprai, fasilitas dan linen berstandar bintang lima menciptakan lingkungan tidur premium untuk merevitalisasi Anda.</p>
+                        <p class="lang-content" data-lang="zh">五星级标准的床垫、床品、用品与床单，打造优质睡眠环境，让您焕发活力。</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h3 class="lang-content active" data-lang="en">Relax - Emotional Soothing</h3>
+                        <h3 class="lang-content" data-lang="id">Relax - Menenangkan Emosi</h3>
+                        <h3 class="lang-content" data-lang="zh">Relax 情绪舒缓</h3>
+                        
+                        <p class="lang-content active" data-lang="en">A quiet and soothing space that allows you to reset and focus, equipped with complete relaxation facilities.</p>
+                        <p class="lang-content" data-lang="id">Ruang yang tenang dan menenangkan yang memungkinkan Anda untuk reset dan fokus, dilengkapi dengan fasilitas relaksasi lengkap.</p>
+                        <p class="lang-content" data-lang="zh">一个安静舒缓的空间，让您重启与专注，配备完整的放松设施。</p>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h3 class="lang-content active" data-lang="en">Reset - Status Update</h3>
+                        <h3 class="lang-content" data-lang="id">Reset - Pembaruan Status</h3>
+                        <h3 class="lang-content" data-lang="zh">Reset 状态更新</h3>
+                        
+                        <p class="lang-content active" data-lang="en">Restart your body and mind, energize for a new day, and provide a complete renewal experience.</p>
+                        <p class="lang-content" data-lang="id">Mulai ulang tubuh dan pikiran Anda, berenergi untuk hari yang baru, dan memberikan pengalaman pembaruan yang lengkap.</p>
+                        <p class="lang-content" data-lang="zh">重启身心，为新的一天蓄满能量，提供完整的更新体验。</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -718,7 +721,7 @@
         <div class="container">
             <p class="lang-content active" data-lang="en">&copy; 2024 Starray Hotel - Hotel Investment & Management. All rights reserved.</p>
             <p class="lang-content" data-lang="id">&copy; 2024 Hotel Starray - Investasi & Manajemen Hotel. Semua hak dilindungi.</p>
-            <p class="lang-content" data-lang="zh">&copy; 2024 星耀酒店 - 酒店投资与管理. 保留所有权利。</p>
+            <p class="lang-content" data-lang="zh">&copy; 2024 星耀酒店 - 酒店投资与管理. 保留所有权利.</p>
             
             <p style="margin-top: 0.5rem; opacity: 0.7;">www.starrayhotel.com</p>
         </div>
@@ -780,10 +783,10 @@
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(247, 247, 247, 0.98)';
+                navbar.style.background = '#ffffff'; /* 滚动时保持纯白色 */
                 navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
             } else {
-                navbar.style.background = 'rgba(247, 247, 247, 0.95)';
+                navbar.style.background = '#ffffff'; /* 默认也是纯白色 */
                 navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             }
         });
