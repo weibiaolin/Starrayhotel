@@ -1,0 +1,30 @@
+# StarRay Hotel
+
+> Multilingual website for StarRay Hotel Group Indonesia, covering brand positioning, projects, partnerships, and booking updates.
+
+## Canonical site
+- https://www.starrayhotel.com/
+
+## Language routes
+- English home: https://www.starrayhotel.com/
+- Chinese home: https://www.starrayhotel.com/zh/
+- Indonesian home: https://www.starrayhotel.com/id/
+- English booking: https://www.starrayhotel.com/booking/
+- Chinese booking: https://www.starrayhotel.com/zh/booking/
+- Indonesian booking: https://www.starrayhotel.com/id/booking/
+
+## Core facts
+- StarRay Hotel is a hotel branding and operating platform focused on Indonesia.
+- Brand positioning: Certainty in the City.
+- Current operating hotels: 2.
+- Current rooms: 256.
+- Representative project: IKN Mixed-use Project, Nusantara.
+- Contact email: Bill.lin@starrayhotel.com
+
+## Main sections
+- About Us
+- Brand
+- Competitive / operating advantages
+- Projects
+- Partnership & Contact
+- Booking (coming soon)
