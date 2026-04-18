@@ -1,0 +1,201 @@
+
+:root{
+  --bg:#f3efe9;
+  --surface:#f8f5f1;
+  --card:#ffffff;
+  --text:#2f2019;
+  --muted:#6f6158;
+  --brand:#6b3e2b;
+  --brand-dark:#573023;
+  --brand-light:#c9ac98;
+  --accent:#fdd100;
+  --line:rgba(107,62,43,.12);
+  --shadow:0 18px 42px rgba(69,39,26,.07);
+  --radius:32px;
+  --header-offset:124px;
+  --container:1265px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-offset) + 16px)}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.48;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+section[id]{scroll-margin-top:calc(var(--header-offset) + 16px)}
+.container{max-width:var(--container);margin:0 auto;padding:0 28px}
+.site-header{position:sticky;top:0;z-index:80;background:rgba(243,239,233,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(107,62,43,.08)}
+.site-header .inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px}
+.brandmark{display:flex;align-items:center;min-width:0;flex:0 0 auto}
+.brandmark img{height:42px;width:auto}
+.nav{display:flex;align-items:center;justify-content:center;gap:24px;flex:1;min-width:0}
+.nav a{font-size:15px;font-weight:700;color:var(--brand);white-space:nowrap}
+.nav a:hover{color:var(--brand-dark)}
+.actions{display:flex;align-items:center;gap:14px;flex:0 0 auto}
+.lang-switch{display:flex;align-items:center;gap:2px;border:1px solid rgba(107,62,43,.18);border-radius:999px;padding:4px;background:rgba(255,255,255,.45)}
+.lang-switch a,.lang-switch span{display:inline-flex;align-items:center;justify-content:center;height:40px;min-width:46px;padding:0 12px;border-radius:999px;font-size:15px;font-weight:700;color:var(--brand)}
+.lang-switch .active{background:var(--brand);color:#fff}
+.button{display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border-radius:999px;font-weight:800;font-size:16px;transition:.18s ease;white-space:nowrap;border:1px solid transparent}
+.button.brand{background:var(--brand);color:#fff}
+.button.primary{background:#fff;color:var(--brand-dark)}
+.button.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.34)}
+.button.outline{background:transparent;color:var(--brand);border-color:rgba(107,62,43,.18)}
+.button.small{height:42px;padding:0 18px;font-size:14px}
+main{padding-bottom:40px}
+.hero,.booking-hero{padding:24px 0 18px}
+.hero-panel,.booking-panel{position:relative;overflow:hidden;border-radius:34px;padding:44px 34px 28px;box-shadow:var(--shadow);background:radial-gradient(780px 390px at 56% 48%, rgba(155,110,84,.26), transparent 60%),linear-gradient(135deg, #573023 0%, #7a4b39 34%, #a27f67 68%, #ccb2a0 100%)}
+.hero-panel::before,.booking-panel::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.42;background-image:radial-gradient(circle at 80% 18%, rgba(253,209,0,.16) 0 2px, transparent 2px),radial-gradient(circle at 92% 26%, rgba(253,209,0,.10) 0 2px, transparent 2px),radial-gradient(circle at 86% 36%, rgba(253,209,0,.12) 0 2px, transparent 2px);background-size:120px 120px,120px 120px,120px 120px}
+.hero h1,.booking-panel h1{position:relative;margin:0 0 16px;font-size:62px;line-height:1;letter-spacing:-.045em;color:#fff;max-width:700px}
+.hero .kicker,.booking-panel .kicker{position:relative;margin:0 0 16px;font-size:24px;font-weight:600;color:rgba(255,255,255,.96)}
+.hero .lede,.booking-panel .lede{position:relative;margin:0 0 28px;max-width:720px;font-size:18px;color:rgba(255,255,255,.86)}
+.hero-actions,.booking-actions{position:relative;display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.metrics{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.metric{min-height:118px;padding:20px 28px;border-radius:24px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);color:#fff}
+.metric .value{font-size:42px;font-weight:800;line-height:1;margin-bottom:8px}
+.metric .label{font-size:15px;color:rgba(255,255,255,.84)}
+.section{padding:14px 0}
+.card-panel{background:var(--surface);border:1px solid var(--line);border-radius:32px;padding:28px;box-shadow:0 10px 28px rgba(69,39,26,.03)}
+.section-label{margin:0 0 12px;color:var(--brand);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+.section h2{margin:0 0 18px;font-size:38px;line-height:1.05;letter-spacing:-.04em}
+.section-intro{margin:0 0 18px;color:var(--muted);font-size:17px;max-width:920px}
+.about-main,.story-panel,.contact-card,.project-card,.standard-card,.problem-card,.adv-card,.capability-box,.execution-card,.partner-card,.booking-card{background:#fff;border:1px solid rgba(107,62,43,.10);border-radius:24px;padding:24px}
+.about-main{padding:28px}
+.subsection-label{margin:0 0 14px;font-size:13px;color:var(--brand);letter-spacing:.14em;text-transform:uppercase;font-weight:800}
+.about-main h3,.story-copy h3{margin:0 0 14px;font-size:28px;line-height:1.08;letter-spacing:-.03em}
+.about-main p,.story-copy p,.project-card p,.contact-card p,.partner-card p,.problem-card p,.adv-card p,.capability-item p,.execution-card p,.booking-card p{margin:0 0 10px;color:#584840;font-size:17px}
+.foundation{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.foundation .mini{background:#fbf7f3;border:1px solid rgba(107,62,43,.08);border-radius:18px;padding:14px 16px}
+.foundation .value{font-size:30px;font-weight:800;color:var(--brand);line-height:1}
+.foundation .label{margin-top:8px;font-size:14px;color:var(--muted)}
+.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:18px -28px 18px;border-top:1px solid rgba(107,62,43,.08);border-bottom:1px solid rgba(107,62,43,.08);overflow:hidden}
+.photo-strip .item{aspect-ratio:16/9;overflow:hidden}
+.photo-strip img{width:100%;height:100%;object-fit:cover}
+.story-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px;align-items:stretch}
+.story-art{padding:0;overflow:hidden;background:var(--brand);display:flex;align-items:center;justify-content:center}
+.story-art img{width:100%;height:100%;object-fit:cover}
+.story-copy{display:flex;flex-direction:column;justify-content:center}
+.story-quote-mark{font-size:54px;line-height:1;color:var(--accent);margin-bottom:10px}
+.story-quote{font-size:20px;line-height:1.45;color:var(--brand-dark);font-weight:600;font-style:italic;margin:0 0 28px}
+.story-copy .vision-label{margin:0 0 10px;font-size:12px;letter-spacing:.14em;color:#9a8d84;text-transform:uppercase;font-weight:800}
+.story-copy .vision-text{font-size:18px;color:#5d4c44}
+.story-copy .vision-text strong{color:var(--brand-dark)}
+.brand-standards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.standard-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.standard-card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.standard-card .content{padding:18px}
+.standard-card .eyebrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:#b09c90;font-style:italic;font-weight:700}
+.standard-card h3{margin:0 0 4px;font-size:30px;line-height:1.02;color:var(--brand-dark)}
+.standard-card .subhead{margin:0 0 14px;font-size:18px;font-weight:700;color:#c6a11f}
+.feature-list{margin:0;padding-left:20px;display:grid;gap:10px;color:#5c4d45}
+.feature-list li{font-size:16px}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.project-photo{overflow:hidden;border-radius:20px;aspect-ratio:16/10;margin-bottom:18px}
+.project-photo img{width:100%;height:100%;object-fit:cover}
+.project-card h3{margin:0 0 10px;font-size:28px;line-height:1.06}
+.project-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px;color:var(--brand);font-size:14px;font-weight:700}
+.project-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.problem-card{display:flex;flex-direction:column;gap:10px;border-top:3px solid var(--accent)}
+.problem-card .num{font-size:30px;font-weight:700;font-style:italic;color:#d8cec7;line-height:1}
+.problem-card h3{margin:0;font-size:24px;line-height:1.1;color:var(--brand-dark)}
+.problem-card .metric{background:none;border:none;padding:0;min-height:auto;color:var(--brand-dark)}
+.problem-card .metric .value{font-size:28px;color:var(--brand)}
+.problem-card .metric .label{font-size:14px;color:#8a786e}
+.quote-box{margin-top:auto;border:1px solid rgba(253,209,0,.5);border-radius:12px;padding:14px 16px;color:#7a5a49;background:#fffdf7;font-size:17px}
+.section-conclusion{margin-top:22px;padding-top:18px;border-top:1px solid rgba(107,62,43,.08);text-align:center;font-size:18px;color:#6b4d3b}
+.adv-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.adv-card .num{font-size:54px;font-style:italic;color:#e3d9d1;line-height:1;font-weight:700}
+.adv-card h3{margin:10px 0 14px;font-size:24px;line-height:1.1}
+.capability-shell{margin-top:18px}
+.capability-header{margin:0 0 18px;color:var(--muted);font-size:17px}
+.capability-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:start}
+.capability-box{padding:0;overflow:hidden}
+.capability-box h3{margin:0;padding:14px 18px;background:var(--brand);color:#fff;font-size:22px;line-height:1.1}
+.capability-list{padding:18px;display:grid;gap:18px}
+.capability-item h4{margin:0 0 4px;color:#c6a11f;font-size:20px}
+.capability-item p{font-size:15px;color:#7a695e;margin:0}
+.capability-x{display:flex;align-items:center;justify-content:center;width:68px;height:68px;border:2px solid var(--accent);border-radius:999px;color:var(--brand);font-size:42px;font-weight:300;margin-top:96px}
+.execution-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+.execution-card .num{font-size:44px;font-style:italic;color:#e3d9d1;line-height:1;font-weight:700}
+.execution-card h3{margin:10px 0 14px;font-size:24px;line-height:1.1}
+.execution-card .big{margin-top:14px;font-size:24px;font-weight:800;color:var(--brand)}
+.partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.partner-card h3{margin:0 0 10px;font-size:24px}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin-top:18px}
+.contact-card h3{margin:0 0 12px;font-size:28px}
+.contact-list{display:grid;gap:10px;margin-top:18px}
+.booking-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:center}
+.booking-panel .tag{display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.9);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.booking-contact{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:28px;padding:26px;color:#fff}
+.booking-contact h3{margin:0 0 10px;font-size:38px;line-height:1.03}
+.booking-contact p{margin:0 0 10px;font-size:16px;color:rgba(255,255,255,.84)}
+.booking-contact .line{height:1px;background:rgba(255,255,255,.22);margin:16px 0}
+.footer{padding:24px 0 46px;color:#7d6b61;font-size:14px}
+.badge-note{display:inline-block;padding:2px 10px;border-radius:999px;background:#fff8dc;color:var(--brand);font-size:12px;font-weight:700;border:1px solid rgba(253,209,0,.35)}
+@media (max-width:1160px){
+  .nav{gap:18px}
+  .hero h1,.booking-panel h1{font-size:54px}
+  .problem-grid,.execution-grid{grid-template-columns:repeat(2,1fr)}
+  .brand-standards,.partner-grid,.adv-grid-3{grid-template-columns:1fr}
+  .projects-grid,.contact-grid,.booking-grid{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  .container{padding:0 16px}
+  .site-header .inner{display:grid;grid-template-columns:1fr;grid-template-areas:"brand" "actions" "nav";gap:8px;padding-top:10px;padding-bottom:10px;min-height:auto}
+  .brandmark{grid-area:brand;justify-self:start}
+  .brandmark img{height:48px}
+  .actions{grid-area:actions;width:100%;justify-content:space-between;gap:10px}
+  .lang-switch{padding:2px}
+  .lang-switch a,.lang-switch span{height:30px;min-width:34px;padding:0 8px;font-size:13px}
+  .actions .button.brand{height:34px;padding:0 14px;font-size:13px;min-width:88px}
+  .nav{grid-area:nav;width:100%;justify-content:flex-start;gap:16px;overflow-x:auto;overflow-y:hidden;padding:4px 0 4px;scrollbar-width:none;-ms-overflow-style:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{font-size:14px;white-space:nowrap;flex:0 0 auto}
+  .hero,.booking-hero{padding:16px 0 12px}
+  .hero-panel,.booking-panel{padding:20px 16px 16px;border-radius:28px}
+  .hero h1,.booking-panel h1{font-size:clamp(30px,11vw,42px);line-height:.98;max-width:8ch}
+  .hero .kicker,.booking-panel .kicker{font-size:18px;line-height:1.35;margin-bottom:12px}
+  .hero .lede,.booking-panel .lede{font-size:13px;max-width:none}
+  .section-intro,.about-main p,.story-copy p,.project-card p,.contact-card p,.partner-card p,.problem-card p,.adv-card p,.capability-item p,.execution-card p,.feature-list li,.capability-header{font-size:13px}
+  .hero-actions,.booking-actions{display:flex;gap:10px;flex-wrap:nowrap;margin-bottom:18px}
+  .hero-actions .button,.booking-actions .button{flex:1 1 50%;min-width:0;height:38px;font-size:13px;padding:0 10px}
+  .metrics,.foundation,.photo-strip,.projects-grid,.problem-grid,.adv-grid-3,.execution-grid,.partner-grid,.contact-grid,.brand-standards,.booking-grid{grid-template-columns:1fr}
+  .metric,.foundation .mini{min-height:auto;padding:16px 18px}
+  .metric .value,.foundation .value{font-size:32px}
+  .section{padding:10px 0}
+  .card-panel{padding:22px 18px;border-radius:28px}
+  .section h2{font-size:clamp(26px,9vw,34px);line-height:1.04}
+  .about-main,.story-panel,.contact-card,.project-card,.standard-card .content,.problem-card,.adv-card,.capability-box,.execution-card,.partner-card,.booking-card{padding:18px}
+  .about-main h3,.story-copy h3,.project-card h3,.contact-card h3{font-size:22px;line-height:1.08}
+  .photo-strip{margin:18px 0;border-radius:22px;overflow:hidden}
+  .photo-strip .item{aspect-ratio:16/10}
+  .story-grid{grid-template-columns:1fr}
+  .story-art{min-height:220px}
+  .story-quote{font-size:18px}
+  .standard-card img{aspect-ratio:16/10}
+  .standard-card h3{font-size:24px}
+  .standard-card .subhead{font-size:16px}
+  .capability-grid{grid-template-columns:1fr}
+  .capability-x{display:none}
+  .execution-card .big{font-size:20px}
+  .booking-contact{padding:20px}
+  .booking-contact h3{font-size:24px}
+}
+@media (max-width:560px){
+  .container{padding:0 14px}
+  .brandmark img{height:54px}
+  .lang-switch a,.lang-switch span{height:28px;min-width:32px;padding:0 7px;font-size:12px}
+  .actions .button.brand{height:32px;min-width:80px;padding:0 12px;font-size:12px}
+  .nav{gap:14px}
+  .nav a{font-size:13px}
+  .hero-panel,.booking-panel{padding:20px 16px 16px}
+  .hero h1,.booking-panel h1{font-size:clamp(26px,10vw,36px)}
+  .hero .kicker,.booking-panel .kicker{font-size:16px}
+  .hero-actions .button,.booking-actions .button{height:36px;font-size:12px;padding:0 8px}
+  .section h2{font-size:clamp(22px,8.5vw,30px)}
+  .about-main h3,.story-copy h3,.project-card h3,.contact-card h3{font-size:18px}
+  .standard-card h3{font-size:22px}
+  .standard-card .subhead{font-size:15px}
+  .problem-card h3,.adv-card h3,.execution-card h3,.capability-box h3{font-size:20px}
+  .story-quote{font-size:16px}
+  .story-art{min-height:180px}
+}

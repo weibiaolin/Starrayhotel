@@ -1,49 +1,66 @@
-# StarRay Hotel — Detailed site summary
+# StarRay Hotel full machine-readable summary
 
-StarRay Hotel Group Indonesia is presented as a hotel branding and operating platform focused on Indonesia. The site is built in English, Simplified Chinese, and Indonesian.
+StarRay Hotel is a hospitality brand and operating platform built for Indonesia. The site is available in English, Simplified Chinese, and Indonesian.
 
-## Brand
-Brand line: Certainty in the City.
+## Positioning
+- Built for reliability. Designed for peace of mind.
+- The brand promise is "Certainty in the City".
+- Target outcome: dependable, predictable, and reassuring guest stays.
 
-The brand framework is organized around three guest experience pillars:
-1. REST — Certainty in Sleep
-2. RELAX — Certainty in Comfort
-3. RESET — Certainty in Recovery
-
-## Company platform
-The platform combines:
-- brand capability
-- operating systems
-- local execution
-- supply-chain integration
-- technology-enabled management
-
-## Current foundation
+## About
+StarRay combines brand capability, operating systems, local execution, supply-chain integration, and technology-enabled management. Current operating foundation:
 - Established: 2025
 - Operating hotels: 2
 - Current rooms: 256
 - Total projects: 7
 
-## Founder credentials
+Founder:
 - Bill Lin
-- Co-Investor, Delonix Bravo Investment
-- Former President, Delonix Group Indonesia
-- Former CEO, Plateno Group International
+- Co-Investor at Delonix Bravo Investment, in joint investment with Alex Zheng (Founder & Chairman of Delonix Group) in the Nusantara mixed-use project.
+- Former President of Delonix Group Indonesia.
+- Former CEO of Plateno Group International.
 
-## Projects currently shown
-- StarRay Hotel Mangga Dua
-- IKN Mixed-use Project / Delonix Nusantara
-- StarRay Hotel Kebayoran
+## Brand standards
+REST / Certainty in Sleep
+- Premium bedding standard
+- Comprehensive soundproofing
+- Standardized air quality and precise lighting controls
 
-## Partnerships
-The website highlights three partnership directions:
-- owner partnership
-- new hotel development
-- strategic capital
+RELAX / Certainty in Comfort
+- Unified signature scent profile
+- Stable water pressure and temperature
+- Consistent, uncompromised cleanliness standards
 
-## Booking
-The website has a booking page in all three languages. Booking is marked as coming soon.
+RESET / Certainty in Recovery
+- Seamless arrival and departure
+- Breakfast quality held to a consistent benchmark
+- Clear, efficient, and reliable service rhythms
+
+## Projects
+- StarRay Hotel Mangga Dua, Jakarta, operating asset
+- IKN Mixed-use Project, Nusantara, strategic investment participation
+- StarRay Hotel Kebayoran, Jakarta, pipeline asset
+
+## Competitive edge logic
+1. Market Paradox
+- Capital misallocation
+- Low operating efficiency
+- Dependency on OTA without ownership
+
+2. The Long Game
+- Targeted Brand Focus
+- Membership Asset
+- IT System & AI
+
+3. Capability Foundation
+- China chain-hotel expertise
+- Indonesia local execution capability
+
+4. Execution Excellence
+- 30–40% lower cost-per-key
+- 3–8 month launch cycle
+- 10–15% higher occupancy and ADR potential
+- 45–60% GOP target margin
 
 ## Contact
-Primary contact email: Bill.lin@starrayhotel.com
-Site URL: https://www.starrayhotel.com/
+Bill.lin@starrayhotel.com
