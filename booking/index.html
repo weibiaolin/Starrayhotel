@@ -134,16 +134,70 @@ textarea{min-height:120px;resize:vertical}
   .booking-grid,.contact-grid,.projects-grid{grid-template-columns:1fr}
 }
 @media (max-width:900px){
-  .site-header .inner{min-height:80px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
-  .nav{order:3;width:100%;justify-content:flex-start;overflow:auto;padding-bottom:4px}
-  .nav a{font-size:16px}
-  .hero-panel,.booking-panel{padding:30px 22px 20px}
-  .hero h1{font-size:44px}
-  .hero .kicker{font-size:20px}
-  .metrics,.brand-cards,.partner-grid,.foundation,.edge-cards,.photo-strip{grid-template-columns:1fr}
-  .section h2{font-size:34px}
-  .booking-panel h1{font-size:50px}
-  .actions{width:100%;justify-content:space-between}
+  .site-header .inner{min-height:auto;flex-wrap:wrap;padding-top:12px;padding-bottom:10px;gap:12px}
+  .brandmark{width:100%;justify-content:flex-start}
+  .brandmark img{height:34px;width:auto}
+  .actions{order:2;width:100%;justify-content:space-between;gap:12px}
+  .lang-switch{padding:4px}
+  .lang-switch a,.lang-switch span{height:36px;min-width:42px;padding:0 12px;font-size:14px}
+  .actions .button.brand{height:46px;padding:0 22px;font-size:15px}
+  .nav{order:3;width:100%;justify-content:space-between;gap:10px;overflow:visible;padding:2px 0 0}
+  .nav a{font-size:clamp(12px,4vw,14px);white-space:nowrap}
+  .hero-panel,.booking-panel{padding:26px 18px 18px;border-radius:28px}
+  .hero h1,.booking-panel h1{font-size:clamp(34px,12vw,50px);line-height:1.02}
+  .hero .kicker{font-size:18px}
+  .hero .lede,.section-intro,.project-card p,.contact-card p,.about-company p,.about-founder p,.booking-panel p{font-size:15px}
+  .metrics,.brand-cards,.partner-grid,.foundation,.edge-cards,.photo-strip,.booking-grid,.contact-grid,.projects-grid{grid-template-columns:1fr}
+  .hero .cta,.booking-actions,.project-actions{flex-direction:column;align-items:stretch}
+  .hero .cta .button,.booking-actions .button,.project-actions .button{width:100%;justify-content:center}
+  .section h2{font-size:clamp(30px,10vw,38px);line-height:1.03}
+  .card-panel{padding:22px 16px;border-radius:28px}
+  .about-main{padding:18px}
+  .about-company h4{font-size:24px;line-height:1.08}
+  .about-founder h4{font-size:20px}
+  .metric{min-height:auto;padding:18px 20px}
+  .metric .value{font-size:38px}
+  .booking-contact{padding:20px}
+  .booking-contact h3{font-size:30px}
+  .photo-strip{margin:16px -16px}
+  .photo-strip .item{aspect-ratio:16/10}
+  .brand-card{min-height:420px}
+  .brand-card .content{padding:16px}
+  .brand-card h3{font-size:clamp(28px,10vw,42px)}
+  .brand-card p{font-size:15px;max-width:100%}
+}
+@media (max-width:640px){
+  html{scroll-padding-top:184px}
+  section[id]{scroll-margin-top:184px}
+  .container{padding:0 16px}
+  .site-header{border-bottom:1px solid rgba(107,62,43,.08)}
+  .site-header .inner{padding-top:10px;padding-bottom:8px}
+  .brandmark img{height:30px}
+  .actions .button.brand{min-width:128px}
+  .hero,.booking-hero{padding:14px 0 10px}
+  .hero-panel,.booking-panel{padding:22px 16px 16px}
+  .hero h1,.booking-panel h1{font-size:clamp(30px,11vw,44px);line-height:0.98}
+  .hero .kicker{font-size:16px;margin-bottom:14px}
+  .hero .lede,.booking-panel p{font-size:14px}
+  .section{padding:8px 0}
+  .section h2{font-size:clamp(28px,10vw,34px)}
+  .project-card,.partner-card,.contact-card{padding:18px}
+  .project-card h3,.contact-card h3,.edge-card h3{font-size:24px}
+}
+@media (max-width:420px){
+  html{scroll-padding-top:188px}
+  section[id]{scroll-margin-top:188px}
+  .container{padding:0 14px}
+  .brandmark img{height:28px}
+  .lang-switch a,.lang-switch span{min-width:40px;padding:0 11px}
+  .nav{gap:8px}
+  .nav a{font-size:12px}
+  .hero h1,.booking-panel h1{font-size:28px}
+  .hero .kicker{font-size:15px}
+  .hero .lede,.booking-panel p,.section-intro,.project-card p,.contact-card p,.about-company p,.about-founder p{font-size:14px}
+  .brand-card{min-height:380px}
+  .brand-card h3{font-size:24px}
+  .photo-strip{margin:14px -14px}
 }
 
 .mail-help{font-size:14px;color:#7c6b61}
