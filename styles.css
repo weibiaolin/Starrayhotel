@@ -142,7 +142,7 @@ main{padding-bottom:40px}
   .container{padding:0 16px}
   .site-header .inner{display:grid;grid-template-columns:1fr;grid-template-areas:"brand" "actions" "nav";gap:6px;padding-top:8px;padding-bottom:8px;min-height:auto}
   .brandmark{grid-area:brand;justify-self:start}
-  .brandmark img{height:34px}
+  .brandmark img{height:38px}
   .actions{grid-area:actions;width:100%;justify-content:space-between;gap:10px}
   .lang-switch{padding:2px}
   .lang-switch a,.lang-switch span{height:30px;min-width:34px;padding:0 8px;font-size:13px}
@@ -182,7 +182,7 @@ main{padding-bottom:40px}
 }
 @media (max-width:560px){
   .container{padding:0 14px}
-  .brandmark img{height:38px}
+  .brandmark img{height:34px}
   .lang-switch a,.lang-switch span{height:28px;min-width:32px;padding:0 7px;font-size:12px}
   .actions .button.brand{height:32px;min-width:80px;padding:0 12px;font-size:12px}
   .nav{gap:14px}
